@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<title>⏩ Live Testing Example - Sequential Workflow Designer</title>
+		<meta property="og:title" content="⏩ Live Testing Example - Sequential Workflow Designer" />
+		<meta name="description" content="Run your workflow in real time with nice animation." />
+		<meta property="og:description" content="Run your workflow in real time with nice animation." />
+		<meta property="og:image" content="https://nocode-js.com/img/social-card.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://nocode-js.com/img/social-card.png" />
+
+		<link rel="icon" href="./assets/favicon.ico" />
+		<link rel="stylesheet" href="./assets/common.css" />
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+			}
+			#content {
+				flex: 1;
+				position: relative;
+			}
+			#designer {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 30%;
+				bottom: 0;
+			}
+			.sqd-editor {
+				padding: 10px;
+			}
+			.sqd-editor p {
+				margin: 0;
+				padding: 0 0 10px;
+			}
+			.sqd-editor label {
+				display: block;
+				padding: 0 0 10px;
+			}
+			.sqd-editor input[type='text'] {
+				width: 100%;
+				box-sizing: border-box;
+				border: 1px solid silver;
+				padding: 6px;
+				border-radius: 5px;
+			}
+			.sqd-editor input[type='text']:read-only {
+				background: #f4f4f4;
+				border-color: #ddd;
+				color: #999;
+			}
+
+			#result {
+				position: absolute;
+				top: 0;
+				left: 70%;
+				right: 0;
+				bottom: 0;
+				padding: 10px;
+				box-sizing: border-box;
+				color: #fff;
+				background: #3747dd;
+			}
+			#result a.github {
+				color: #fff;
+				display: inline-block;
+				margin: 6px 8px;
+			}
+			#result a.github:hover {
+				text-decoration: none;
+			}
+			#result button {
+				padding: 10px;
+				color: #000;
+				background: #fff;
+				border: 0;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			#result button:hover {
+				opacity: 0.8;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="title-bar">
+			<div class="column">
+				<h1>⏩ Live Testing Example</h1>
+			</div>
+			<div class="column text-end flex-1 text-gray">
+				<a href="https://github.com/nocode-js/sequential-workflow-designer" target="_blank">GitHub</a> |
+				<a href="https://nocode-js.com" target="_blank">NoCode JS</a>
+			</div>
+		</header>
+
+		<div id="content">
+			<div id="designer"></div>
+
+			<div id="result">
+				<p>
+					<button id="run">Run 🚀</button>
+				</p>
+
+				<h5>Variables</h5>
+
+				<pre id="variables"></pre>
+
+				<h5>Console</h5>
+
+				<pre id="console"></pre>
+			</div>
+		</div>
+
+		<script src="./assets/lib.js"></script>
+		<script src="./assets/state-machine.js"></script>
+		<script src="./assets/live-testing.js"></script>
+	</body>
+</html>

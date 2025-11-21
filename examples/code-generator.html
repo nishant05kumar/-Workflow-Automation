@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<title>🤖 Code Generator Example - Sequential Workflow Designer</title>
+		<meta property="og:title" content="🤖 Code Generator Example - Sequential Workflow Designer" />
+		<meta name="description" content="How you can use Sequential Workflow Designer to generate code." />
+		<meta property="og:description" content="How you can use Sequential Workflow Designer to generate code." />
+		<meta property="og:image" content="https://nocode-js.com/img/social-card.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://nocode-js.com/img/social-card.png" />
+
+		<link rel="icon" href="./assets/favicon.ico" />
+		<style>
+			body {
+				font:
+					14px/1.3em 'Open Sans',
+					Arial,
+					Verdana,
+					Serif;
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			#designer {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 42%;
+			}
+			#output {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 58%;
+				padding: 10px;
+				box-sizing: border-box;
+				color: #fff;
+				background: #151515;
+			}
+			#output #code {
+				color: silver;
+			}
+			#output #result {
+				color: yellow;
+			}
+			#output a {
+				color: #fff;
+			}
+			#output a:hover {
+				text-decoration: none;
+			}
+
+			.sqd-root-editor {
+				padding: 10px;
+			}
+
+			.sqd-editor h3 {
+				margin: 0;
+				padding: 10px;
+			}
+			.sqd-editor p {
+				margin: 0;
+				padding: 10px;
+			}
+			.sqd-editor p label {
+				display: block;
+				padding: 0 0 5px;
+			}
+			.sqd-editor input {
+				width: 100%;
+				box-sizing: border-box;
+				border: 1px solid silver;
+				padding: 6px;
+				border-radius: 5px;
+			}
+
+			/* types */
+
+			.sqd-theme-soft .sqd-toolbox-item.sqd-type-setNumber {
+				background: #e6f2ff !important;
+				border-color: #c6d0db !important;
+			}
+			.sqd-step-task.sqd-type-setNumber .sqd-step-task-rect {
+				fill: #e6f2ff !important;
+				stroke: #c6d0db !important;
+			}
+
+			.sqd-theme-soft .sqd-toolbox-item.sqd-type-assignVar {
+				background: #ffeee6 !important;
+				border-color: #e3cec4 !important;
+			}
+			.sqd-step-task.sqd-type-assignVar .sqd-step-task-rect {
+				fill: #ffeee6 !important;
+				stroke: #e3cec4 !important;
+			}
+
+			.sqd-theme-soft .sqd-toolbox-item.sqd-type-addVar {
+				background: #e6ffe6 !important;
+				border-color: #c2dac2 !important;
+			}
+			.sqd-step-task.sqd-type-addVar .sqd-step-task-rect {
+				fill: #e6ffe6 !important;
+				stroke: #c2dac2 !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="designer"></div>
+
+		<div id="output">
+			<h4>🤖 Code Generator | <a href="https://github.com/nocode-js/sequential-workflow-designer" target="_blank">GitHub</a></h4>
+
+			<pre id="code"></pre>
+
+			<h4>Result</h4>
+
+			<pre id="result"></pre>
+		</div>
+
+		<script src="./assets/lib.js"></script>
+		<script src="./assets/code-generator.js"></script>
+	</body>
+</html>
